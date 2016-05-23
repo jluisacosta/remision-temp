@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Remisión de salida de material</title>
+        <link rel="stylesheet" href="./css/normalize.min.css">
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/index.css">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <header>
+                <h1>Banco de material pétreo "San Elías"</h1>
+            </header>
+        </div>
+        <div class="container">
+            <section>
+                <h2>Remisión de salida de material</h2>
+                <hr>
+                <form class="form-horizontal" id="data-form">
+                    <div class="row">
+                        <div class="col-sm-offset-6 col-sm-3">
+                            <div class="form-group" id="div-fecha">
+                                <label for="fecha" class="col-xs-4 control-label">Fecha</label>
+                                <div class="col-xs-8">
+                                    <input class="form-control" type="text" name="fecha" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-group" id="div-folio">
+                                <label for="folio" class="col-xs-4 control-label">Folio</label>
+                                <div class="col-xs-8">
+                                    <input class="form-control" type="text" name="folio" readonly>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="cliente" class="col-xs-2 control-label">Cliente*</label>
+                                <div class="col-xs-10">
+                                    <input class="form-control" type="text" name="cliente" placeholder="Nombre / Razón social">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="rfc" class="col-xs-2 control-label">RFC</label>
+                                <div class="col-xs-10">
+                                    <input class="form-control" type="text" name="rfc" placeholder="Clave Registro Federal de Contribuyentes">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="direccion" class="col-sm-1 control-label">Dirección*</label>
+                        <div class="col-sm-11">
+                            <input class="form-control" type="text" name="direccion" placeholder="Calle, Número, Colonia, Código Postal, Comunidad y/o Municipio, Estado">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="telefono" class="col-xs-2 control-label">Teléfono*</label>
+                                <div class="col-xs-10">
+                                    <input class="form-control" type="text" name="telefono" placeholder="Clave LADA + Número de contacto">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="email" class="col-xs-2 control-label">E-mail</label>
+                                <div class="col-xs-10">
+                                    <input class="form-control" type="email" name="email" placeholder="ejemplo@dominio.com">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="condiciones" class="col-sm-2 control-label">Condiciones de pago*</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" type="text" name="condiciones" placeholder="De contado / Pago por adelantado / A crédito">
+                        </div>
+                    </div>
+                    <hr>
+                    <table class="table table-striped" id="detail-table">
+                        <thead>
+                            <tr>
+                                <th>Cantidad</th>
+                                <th>Descripción del material</th>
+                                <th>Precio unitario</th>
+                                <th>Importe</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Se agrega la plantilla de cada fila por medio de jQuery -->
+                        </tbody>
+                    </table>
+                    <p id="agregar" class="text-right"><a href="" ><i>Agregar otra fila +</i></a></p>
+                    <hr>
+                    <div class="row" id="nota">
+                        <div class="col-sm-8">
+                            <small>
+                                Servicios Integrales Empresariales del Centro MHC S.A. de C.V., Carretera  57 a Matehuala + km 2.5 Carretera a San Elías, Cerro de la Joyita, Armadillo de los Infante, S.L.P. SEMARNAT  144.1.-SDGPARN.-UG.DIRA.-   18 Dic. 2006.- SEGAM   ECO.03.1695/2008 Exp. IA. 077/08 01 Dic. 2008.-
+                            </small>
+                        </div>
+                        <div class="col-sm-4" id="totales">
+                            <div class="form-group">
+                                <label for="subtotal" class="col-xs-4 control-label">Subtotal:</label>
+                                <div class="col-xs-8">
+                                    <input class="form-control" type="text" name="subtotal" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="iva" class="col-xs-4 control-label">IVA:</label>
+                                <div class="col-xs-8">
+                                    <input class="form-control" type="text" name="iva" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="total" class="col-xs-4 control-label">Total:</label>
+                                <div class="col-xs-8">
+                                    <input class="form-control" type="text" name="total" readonly>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-offset-2 col-sm-4">
+                            <input class="btn btn-danger btn-lg btn-block" type="button" value="Cancelar" id="btn-cancelar">
+                        </div>
+                        <div class="col-sm-4">
+                            <input class="btn btn-success btn-lg btn-block" type="button" value="Generar" id="btn-generar">
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+        <div class="container-fluid">
+            <footer>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <p class="text-center"><a href="#">Banco de materiales "San Elías", 2016</a></p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">Generar Remisión de material</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            <strong>Esta seguro de generar la remisión con folio <span id="folio-actual"></span> ?</strong><br><br>
+                            Esta acción es irreversible, al pulsar "Imprimir" se abrirá la vista previa de impresión,
+                            si no se finaliza dicha acción guardando y/o imprimiendo el archivo, la nota y el folio ya <strong>NO</strong> estarán
+                            disponibles y <strong>los datos capturados se perderán</strong>.<br><br>
+                            <strong>Recuerde revisar los datos ingresados.</strong>
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-warning" data-dismiss="modal">Regresar</button>
+                        <button type="button" class="btn btn-success" id="btn-imprimir">Imprimir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">Error</h4>
+                    </div>
+                    <div class="modal-body">
+                        <h5>No ha sido posible generar la nota de remisión por alguno de los siguientes motivos:</h5><br>
+                        <ol>
+                            <li>
+                                <p>Algunos de los datos obligatorios no han sido introducidos</p>
+                                <ul>
+                                    <li>Client</li>
+                                    <li>Dirección</li>
+                                    <li>Teléfono</li>
+                                    <li>Condiciones de pago</li>
+                                </ul>
+                            </li><br>
+                            <li><p>La tabla de materiales no ha sido llenada correctamente.</p></li>
+                        </ol>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="./js/jquery.min.js"></script>
+        <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="./js/index.js"></script>
+    </body>
+</html>

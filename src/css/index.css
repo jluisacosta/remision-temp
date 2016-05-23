@@ -1,0 +1,246 @@
+.container-fluid{
+    padding: 0;
+    background-color: #337ab7;
+    color:white;
+}
+
+header{
+    padding: 0 50px 10px 50px;
+}
+
+section {
+    margin:30px 0;
+}
+
+h2 {
+    color: #337ab7;
+}
+
+footer {
+    padding: 25px 0 20px 0;
+    overflow: hidden;
+}
+
+footer a{
+    color: white;
+    opacity: .7;
+}
+
+footer a:hover{
+    opacity: 1;
+    color:white;
+}
+
+#div-fecha, #div-folio {
+    position: absolute;
+    top:-70px;
+    left: 45px;
+}
+
+label[for='condiciones'] {
+    text-align: left !important;
+}
+
+#detail-table input{
+    background-color: transparent;
+}
+
+#agregar {
+    margin-right: 10px;
+}
+
+#agregar a:hover, #agregar a:visited, #agregar a:active, #agregar a:link {
+    text-decoration: none;
+}
+
+#agregar a{
+    opacity: .7;
+}
+
+#agregar a:hover {
+    opacity: 1;
+}
+
+#totales input {
+    text-align: center;
+    font-size: 16px;
+}
+
+#myModal .modal-header {
+    background-color: #337ab7;
+    color:white;
+}
+
+#myModal2 .modal-header {
+    background-color: #d9534f;
+    color:white;
+}
+
+@media print {
+
+    h1, h2, label, input {
+        position: absolute;
+    }
+
+    h1 {
+        font-size: 32px;
+        left: 0;
+    }
+
+    h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 30px;
+        left: 0;
+    }
+
+    hr,footer,.btn,#agregar {
+        display: none;
+    }
+
+    .form-horizontal {
+        position: absolute;
+        top: 77px;
+    }
+
+    .form-horizontal input {
+        border: 0;
+        border-radius: 0;
+        border-bottom: 1px solid #dcdde0;
+        width: 200px;
+    }
+
+    #div-fecha, #div-folio {
+        position: static;
+    }
+
+    label[for="fecha"] {
+        left:400px;
+    }
+
+    input[name="fecha"] {
+        top:-7px;
+        left:190px;
+        width:100px;
+    }
+
+    label[for="folio"] {
+        top:-40px;
+        left:600px;
+    }
+
+    input[name="folio"] {
+        top:-47px;
+        left:390px;
+        width:100px;
+    }
+
+    label[for="cliente"] {
+        top:-20px;
+        left:0px;
+    }
+
+    input[name="cliente"] {
+        top:-27px;
+        left:-50px;
+        width:300px;
+    }
+
+    label[for="rfc"] {
+        top:-60px;
+        left:400px;
+    }
+
+    input[name="rfc"] {
+        top:-67px;
+        left:330px;
+        width:300px;
+    }
+
+    label[for="direccion"] {
+        top:-50px;
+        left:0px;
+    }
+
+    input[name="direccion"] {
+        top:-82px;
+        left:92px;
+        width:680px;
+    }
+
+    label[for="telefono"] {
+        top:-40px;
+        left:0px;
+    }
+
+    input[name="telefono"] {
+        top:-47px;
+        left:-50px;
+        width:300px;
+    }
+
+    label[for="email"] {
+        top:-80px;
+        left:400px;
+    }
+
+    input[name="email"] {
+        top:-87px;
+        left:330px;
+        width:300px;
+    }
+
+    label[for="condiciones"] {
+        top:-60px;
+        left:0px;
+    }
+
+    input[name="condiciones"] {
+        top:-92px;
+        left:172px;
+        width:600px;
+    }
+
+    #detail-table {
+        position: absolute;
+        left:0px;
+        top:290px;
+        width: 800px;
+    }
+
+    #detail-table td {
+        height: 50px;
+    }
+
+    #detail-table input.cantidad{
+        width: 133px;
+    }
+
+    #detail-table input.descripcion{
+        width: 318px;
+    }
+
+    #detail-table input.importe{
+        width: 115px;
+    }
+
+    #detail-table input {
+        border-bottom: 0;
+    }
+
+    #nota {
+        margin-top:650px;
+    }
+
+    #totales {
+        position: absolute;
+        margin-top: -210px;
+        margin-left: 555px;
+    }
+
+    #totales input {
+        margin-top: -10px;
+        margin-left: 55px;
+        width: 150px;
+    }
+}
